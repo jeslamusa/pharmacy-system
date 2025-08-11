@@ -94,7 +94,19 @@ export default function AdminDashboard() {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-gray-50">
+    <div 
+      className="min-h-screen w-full h-full"
+      style={{
+        backgroundImage: 'url("/images/image1.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      
       {/* Content */}
       <div className="relative z-10 min-h-screen w-full pt-20">
         {/* Header */}
@@ -104,11 +116,11 @@ export default function AdminDashboard() {
           className="flex items-center justify-between p-6"
         >
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Administrator Dashboard</h1>
-            <p className="text-gray-600 mt-2">Full system control and management</p>
+            <h1 className="text-3xl font-bold text-white drop-shadow-lg">Administrator Dashboard</h1>
+            <p className="text-gray-200 mt-2 drop-shadow-md">Full system control and management</p>
           </div>
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-lg">
+            <div className="flex items-center space-x-2 bg-blue-50 bg-opacity-90 backdrop-blur-sm px-4 py-2 rounded-lg">
               <Activity size={20} className="text-blue-600" />
               <span className="text-blue-800 font-medium">Administrator Access</span>
             </div>
@@ -139,7 +151,7 @@ export default function AdminDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + index * 0.1 }}
-                className={`${stat.bgColor} p-6 rounded-lg border border-gray-200 shadow-lg`}
+                className={`${stat.bgColor} bg-opacity-90 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-lg`}
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -158,7 +170,7 @@ export default function AdminDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg mx-6 mt-6"
+          className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg border border-gray-200 p-6 shadow-lg mx-6 mt-6"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -192,11 +204,11 @@ export default function AdminDashboard() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 mt-6"
         >
           {/* Recent Orders */}
-          <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg">
+          <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg border border-gray-200 p-6 shadow-lg">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Orders</h2>
             <div className="space-y-3">
               {mockOrders.slice(0, 5).map((order) => (
-                <div key={order.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div key={order.id} className="flex items-center justify-between p-3 bg-gray-50 bg-opacity-50 rounded-lg">
                   <div>
                     <p className="font-medium text-gray-900">#{order.id}</p>
                     <p className="text-sm text-gray-600">{order.customerName}</p>
@@ -217,11 +229,11 @@ export default function AdminDashboard() {
           </div>
 
           {/* Low Stock Alerts */}
-          <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg">
+          <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg border border-gray-200 p-6 shadow-lg">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Low Stock Alerts</h2>
             <div className="space-y-3">
               {mockProducts.filter(p => p.stock < 10).slice(0, 5).map((product) => (
-                <div key={product.id} className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
+                <div key={product.id} className="flex items-center justify-between p-3 bg-red-50 bg-opacity-50 rounded-lg">
                   <div>
                     <p className="font-medium text-gray-900">{product.name}</p>
                     <p className="text-sm text-gray-600">{product.category}</p>
