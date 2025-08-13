@@ -94,16 +94,7 @@ export default function AdminDashboard() {
   ]
 
   return (
-    <div 
-      className="min-h-screen w-full h-full"
-      style={{
-        backgroundImage: 'url("/images/image1.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+    <div className="min-h-screen w-full h-full admin-bg">
       {/* Semi-transparent overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       

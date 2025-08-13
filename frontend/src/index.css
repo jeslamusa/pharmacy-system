@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom background image classes */
+.admin-bg {
+  background-image: url('/images/image1.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.manager-bg {
+  background-image: url('/images/image2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.supervisor-bg {
+  background-image: url('/images/image3.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

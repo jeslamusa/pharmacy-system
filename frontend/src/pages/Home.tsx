@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { galleryImages, galleryFallback } from '../data/gallery'
-import ImageTest from '../components/ImageTest'
 import {
   Home as HomeIcon,
   Phone,
@@ -583,12 +582,7 @@ export default function Home() {
          </div>
        </section>
 
-       {/* Image Test Section */}
-       <section className="py-16 bg-gray-50">
-         <div className="max-w-7xl mx-auto px-4">
-           <ImageTest />
-         </div>
-       </section>
+
 
              {/* Footer */}
        <footer className="bg-gray-900 text-gray-100">
