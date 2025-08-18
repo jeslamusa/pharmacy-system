@@ -96,12 +96,12 @@ export default function ManagerDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50 to-emerald-50">
-      <div className="p-6 space-y-6">
+      <div className="space-y-6">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6 mt-6"
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>
@@ -122,7 +122,7 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-6"
         >
           {stats.map((stat, index) => {
             const Icon = stat.icon
@@ -153,7 +153,7 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -184,7 +184,7 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-6"
         >
           {/* Order Status Overview */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
@@ -238,7 +238,7 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6 mb-6"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

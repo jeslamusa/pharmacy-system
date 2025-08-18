@@ -95,12 +95,12 @@ export default function SupervisorDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50 to-indigo-50">
-      <div className="p-6 space-y-6">
+      <div className="space-y-6">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6 mt-6"
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>

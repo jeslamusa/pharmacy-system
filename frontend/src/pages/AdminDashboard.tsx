@@ -139,12 +139,12 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
-      <div className="p-6 space-y-6">
+      <div className="space-y-6">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6 mt-6"
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>
@@ -174,7 +174,7 @@ export default function AdminDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-6"
         >
           {stats.map((stat, index) => {
             const Icon = stat.icon
@@ -248,7 +248,7 @@ export default function AdminDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6"
         >
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold text-gray-900">Quick Actions</h2>
@@ -290,7 +290,7 @@ export default function AdminDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-6"
         >
           {/* Recent Orders */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
