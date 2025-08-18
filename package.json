@@ -1,0 +1,25 @@
+{
+  "name": "pharmacy-management-system",
+  "version": "1.0.0",
+  "description": "Full-stack Pharmacy Management System",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "build-frontend": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "pharmacy",
+    "management",
+    "react",
+    "nodejs",
+    "express"
+  ],
+  "author": "Jeslamusa",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
