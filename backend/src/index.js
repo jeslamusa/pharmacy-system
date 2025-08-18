@@ -91,27 +91,16 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
       });
     }
 
-    // Upload to Cloudinary if configured
-    if (process.env.CLOUDINARY_CLOUD_NAME) {
-      const result = await cloudinary.uploader.upload(req.file.path, {
-        folder: 'pharmacy-system',
-        use_filename: true
-      });
-      
-      res.json({
-        success: true,
-        imageUrl: result.secure_url,
-        publicId: result.public_id,
-        localPath: `/uploads/${req.file.filename}`
-      });
-    } else {
-      // Return local file path if Cloudinary not configured
-      res.json({
-        success: true,
-        imageUrl: `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`,
-        localPath: `/uploads/${req.file.filename}`
-      });
-    }
+    // For now, use local storage only (Cloudinary optional)
+    const imageUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+    
+    res.json({
+      success: true,
+      imageUrl: imageUrl,
+      localPath: `/uploads/${req.file.filename}`,
+      message: 'Image uploaded successfully'
+    });
+    
   } catch (error) {
     console.error('Upload error:', error);
     res.status(500).json({
@@ -161,7 +150,7 @@ app.get('/api/products', (req, res) => {
       price: 5000,
       stock: 150,
       description: 'Effective pain relief medication',
-      image: '/images/paracetamol.jpg'
+      image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop'
     },
     {
       id: 2,
@@ -170,7 +159,7 @@ app.get('/api/products', (req, res) => {
       price: 8000,
       stock: 75,
       description: 'Broad-spectrum antibiotic',
-      image: '/images/amoxicillin.jpg'
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop'
     },
     {
       id: 3,
@@ -179,7 +168,7 @@ app.get('/api/products', (req, res) => {
       price: 6000,
       stock: 200,
       description: 'Anti-inflammatory pain reliever',
-      image: '/images/ibuprofen.jpg'
+      image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=300&fit=crop'
     }
   ];
   res.json(mockProducts);
