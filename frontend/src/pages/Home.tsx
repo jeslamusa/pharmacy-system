@@ -25,6 +25,11 @@ export default function Home() {
   const [current, setCurrent] = useState(0)
   const [productsMenuOpen, setProductsMenuOpen] = useState(false)
   
+  // Debug logging
+  console.log('Gallery Images:', galleryImages)
+  console.log('Gallery Fallback:', galleryFallback)
+  console.log('Using slides:', slides)
+  
   // Different text content for each slide
   const slideContent = [
     {
@@ -165,6 +170,13 @@ export default function Home() {
                animate={{ opacity: current === idx ? 1 : 0 }}
                transition={{ duration: 0.6 }}
                className="absolute inset-0 w-full h-full object-cover"
+               onError={(e) => {
+                 console.error('Failed to load image:', src)
+                 // Fallback to a default image if loading fails
+                 const target = e.target as HTMLImageElement
+                 target.src = 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&h=900&fit=crop'
+               }}
+               onLoad={() => console.log('Image loaded successfully:', src)}
              />
            ))}
            <div className="absolute inset-0 bg-black/50" />
@@ -229,6 +241,11 @@ export default function Home() {
                  alt="Clinic"
                  className="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover object-center transform hover:scale-105 transition-transform duration-500"
                  src="/images/image.png"
+                 onError={(e) => {
+                   console.error('Failed to load welcome image')
+                   const target = e.target as HTMLImageElement
+                   target.src = 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=600&fit=crop'
+                 }}
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
              </motion.div>
@@ -259,6 +276,11 @@ export default function Home() {
               src="/images/image2.png"
               alt="Services Background"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                console.error('Failed to load services background image')
+                const target = e.target as HTMLImageElement
+                target.src = 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&h=900&fit=crop'
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-indigo-900/90"></div>
           </div>
@@ -327,6 +349,11 @@ export default function Home() {
               alt="Delivery"
               className="rounded-xl shadow-lg object-cover w-full h-[240px] sm:h-[320px]"
               src="/images/image3.png"
+              onError={(e) => {
+                console.error('Failed to load delivery image')
+                const target = e.target as HTMLImageElement
+                target.src = 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&h=600&fit=crop'
+              }}
             />
           </div>
                           </section>

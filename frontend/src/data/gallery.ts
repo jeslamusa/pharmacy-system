@@ -19,11 +19,12 @@ export const galleryImages: string[] = [
 
 // These remote images are used only if you haven't added your own yet.
 export const galleryFallback: string[] = [
-  'https://images.unsplash.com/photo-1596769390814-63225dbb78f2?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1566417713948-77fe7f265cff?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1618519762016-868e894edb54?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1619721321463-4711e88f6761?q=80&w=1600&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&h=900&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&h=900&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1600&h=900&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1618519762016-868e894edb54?w=1600&h=900&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1619721321463-4711e88f6761?w=1600&h=900&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1596769390814-63225dbb78f2?w=1600&h=900&fit=crop&q=80',
 ]
 
 
