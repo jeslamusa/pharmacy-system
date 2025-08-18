@@ -55,6 +55,22 @@ export default function Home() {
     {
       title: "INNOVATIVE HEALTHCARE DELIVERY",
       subtitle: "Transforming healthcare access across the region"
+    },
+    {
+      title: "GLOBAL PHARMACEUTICAL PARTNERSHIPS",
+      subtitle: "Connecting Uganda with world-class pharmaceutical manufacturers"
+    },
+    {
+      title: "COMMUNITY HEALTH INITIATIVES",
+      subtitle: "Supporting public health programs and community outreach"
+    },
+    {
+      title: "RELIABLE SUPPLY CHAIN",
+      subtitle: "Ensuring consistent availability of essential medications"
+    },
+    {
+      title: "HEALTHCARE EXCELLENCE",
+      subtitle: "Your trusted partner in pharmaceutical distribution"
     }
   ]
   
