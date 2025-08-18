@@ -34,7 +34,10 @@ export default function About() {
 
              {/* About Section */}
        <section className="relative overflow-hidden bg-gradient-to-br from-[#1f2a57] to-[#2a3a6a]">
-         <div className="absolute inset-0 bg-[url('/images/image4.png')] opacity-5 bg-cover bg-center" />
+         <div className="absolute inset-0 bg-cover bg-center" style={{
+           backgroundImage: `url('/images/image4.png'), url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&h=900&fit=crop&q=80')`,
+           opacity: 0.05
+         }} />
          <div className="relative max-w-7xl mx-auto px-4 py-20">
            <div className="grid lg:grid-cols-3 gap-12 items-start">
              <motion.div 
@@ -86,7 +89,10 @@ export default function About() {
 
              {/* Vision & Mission Cards */}
        <section className="relative overflow-hidden">
-         <div className="absolute inset-0 bg-[url('/images/image5.png')] opacity-5 bg-cover bg-center" />
+         <div className="absolute inset-0 bg-cover bg-center" style={{
+           backgroundImage: `url('/images/image5.png'), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&h=900&fit=crop&q=80')`,
+           opacity: 0.05
+         }} />
          <div className="relative max-w-7xl mx-auto px-4 py-20">
            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
              <motion.div 
@@ -324,6 +330,11 @@ export default function About() {
                  src="/images/image1.png"
                  alt="Pharmaceutical professional"
                  className="rounded-xl shadow-lg w-full h-[400px] object-cover"
+                 onError={(e) => {
+                   console.error('Failed to load pharmaceutical professional image')
+                   const target = e.target as HTMLImageElement
+                   target.src = 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=600&fit=crop&q=80'
+                 }}
                />
              </motion.div>
              <motion.div
