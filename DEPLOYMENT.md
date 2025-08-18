@@ -1,218 +1,210 @@
-# 🚀 Deployment Guide - Pharmacy Management System
+# Deployment Guide - Pharmacy Management System
 
-This guide will help you deploy both the frontend and backend of your pharmacy management system.
+This guide will help you deploy both the frontend and backend of the Pharmacy Management System with proper image handling.
+
+## 🚀 Quick Deployment Options
+
+### Option 1: Render.com (Recommended for Backend)
+### Option 2: Railway.app
+### Option 3: Heroku
+### Option 4: DigitalOcean App Platform
+
+---
 
 ## 📋 Prerequisites
 
-- GitHub account
-- Vercel account (for frontend)
-- Render/Railway/Heroku account (for backend)
-- Node.js installed locally
+1. **GitHub Account** - Your code should be in a GitHub repository
+2. **Cloudinary Account** - For image storage (free tier available)
+3. **Vercel Account** - For frontend deployment (free tier available)
 
-## 🎯 Deployment Options
+---
 
-### Option 1: Vercel (Frontend) + Render (Backend) - RECOMMENDED
-### Option 2: Vercel (Frontend) + Railway (Backend)
-### Option 3: Vercel (Frontend) + Heroku (Backend)
+## 🖼️ Image Storage Setup (Cloudinary)
+
+1. **Sign up for Cloudinary** (https://cloudinary.com)
+2. **Get your credentials:**
+   - Cloud Name
+   - API Key
+   - API Secret
+3. **Note these down** - you'll need them for backend deployment
+
+---
+
+## 🔧 Backend Deployment (Render.com)
+
+### Step 1: Prepare Backend
+1. Ensure your backend code is in the `backend/` folder
+2. Make sure `package.json` has all dependencies
+3. Verify `Procfile` exists with: `web: npm start`
+
+### Step 2: Deploy to Render
+1. **Go to Render.com** and sign up/login
+2. **Click "New +"** → **"Web Service"**
+3. **Connect your GitHub repository**
+4. **Configure the service:**
+   - **Name:** `pharmacy-backend`
+   - **Root Directory:** `backend`
+   - **Runtime:** `Node`
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+   - **Plan:** Free
+
+### Step 3: Environment Variables
+Add these environment variables in Render dashboard:
+
+```env
+NODE_ENV=production
+PORT=10000
+FRONTEND_URL=https://your-frontend-domain.vercel.app
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+```
+
+### Step 4: Deploy
+1. Click **"Create Web Service"**
+2. Wait for deployment to complete
+3. **Copy the URL** (e.g., `https://pharmacy-backend.onrender.com`)
 
 ---
 
 ## 🎨 Frontend Deployment (Vercel)
 
-### Step 1: Deploy to Vercel
+### Step 1: Update API URL
+1. In your frontend code, update the API base URL to your backend URL
+2. Update `vercel.json` if needed
 
-1. **Go to [Vercel](https://vercel.com)**
-2. **Sign up/Login** with your GitHub account
-3. **Click "New Project"**
-4. **Import your repository:**
-   - Select `jeslamusa/pharmacy-system`
-   - Set **Root Directory** to `frontend`
-   - Click **Deploy**
+### Step 2: Deploy to Vercel
+1. **Go to Vercel.com** and sign up/login
+2. **Import your GitHub repository**
+3. **Configure:**
+   - **Framework Preset:** Vite
+   - **Root Directory:** `frontend`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
 
-### Step 2: Configure Build Settings
-
-Vercel will automatically detect it's a Vite project. The `vercel.json` file is already configured.
-
-### Step 3: Environment Variables (Optional)
-
-Add these in Vercel dashboard:
-```
+### Step 3: Environment Variables
+Add in Vercel dashboard:
+```env
 VITE_API_URL=https://your-backend-url.onrender.com
 ```
 
----
-
-## ⚙️ Backend Deployment
-
-### Option A: Render (Recommended)
-
-#### Step 1: Deploy to Render
-
-1. **Go to [Render](https://render.com)**
-2. **Sign up/Login** with your GitHub account
-3. **Click "New +" → "Web Service"**
-4. **Connect your repository:**
-   - Select `jeslamusa/pharmacy-system`
-   - Set **Root Directory** to `backend`
-   - Set **Build Command:** `npm install`
-   - Set **Start Command:** `npm start`
-   - Choose **Free** plan
-
-#### Step 2: Environment Variables
-
-Add these in Render dashboard:
-```
-NODE_ENV=production
-FRONTEND_URL=https://your-frontend-url.vercel.app
-JWT_SECRET=your-super-secret-key-here
-```
-
-### Option B: Railway
-
-#### Step 1: Deploy to Railway
-
-1. **Go to [Railway](https://railway.app)**
-2. **Sign up/Login** with your GitHub account
-3. **Click "New Project" → "Deploy from GitHub repo"**
-4. **Select your repository** and set root directory to `backend`
-
-#### Step 2: Environment Variables
-
-Add the same environment variables as Render.
-
-### Option C: Heroku
-
-#### Step 1: Deploy to Heroku
-
-1. **Install Heroku CLI**
-2. **Login to Heroku:**
-   ```bash
-   heroku login
-   ```
-3. **Create Heroku app:**
-   ```bash
-   cd backend
-   heroku create your-pharmacy-api
-   ```
-4. **Deploy:**
-   ```bash
-   git add .
-   git commit -m "Deploy backend"
-   git push heroku main
-   ```
+### Step 4: Deploy
+1. Click **"Deploy"**
+2. Wait for deployment
+3. **Copy the frontend URL**
 
 ---
 
-## 🔗 Connect Frontend to Backend
+## 🔄 Update Backend with Frontend URL
 
-### Step 1: Update API URL
-
-Once your backend is deployed, update the frontend to use the production API:
-
-1. **In Vercel dashboard**, add environment variable:
-   ```
-   VITE_API_URL=https://your-backend-url.onrender.com
-   ```
-
-2. **Update frontend API calls** (if needed):
-   ```javascript
-   const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-   ```
-
-### Step 2: Test the Connection
-
-1. **Visit your frontend URL**
-2. **Try logging in** with the test credentials
-3. **Check browser console** for any API errors
+1. Go back to Render dashboard
+2. Update `FRONTEND_URL` environment variable with your Vercel frontend URL
+3. Redeploy the backend
 
 ---
 
-## 🧪 Testing Your Deployment
+## 🧪 Testing Image Upload
 
-### Test Credentials
-
-| Role | Username | Password |
-|------|----------|----------|
-| Administrator | admin | admin123 |
-| Manager | manager | manager123 |
-| Supervisor | supervisor | supervisor123 |
-
-### Health Check
-
-Visit your backend URL + `/api/health`:
-```
-https://your-backend-url.onrender.com/api/health
-```
-
-You should see:
-```json
-{
-  "status": "OK",
-  "message": "Pharmacy Management System API is running",
-  "timestamp": "2024-01-15T10:30:00.000Z"
-}
-```
-
----
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-1. **CORS Errors:**
-   - Make sure `FRONTEND_URL` is set correctly in backend
-   - Check that the frontend URL is in the CORS allowed origins
-
-2. **Build Failures:**
-   - Check that all dependencies are in `package.json`
-   - Verify Node.js version compatibility
-
-3. **Environment Variables:**
-   - Ensure all required env vars are set in deployment platform
-   - Check for typos in variable names
-
-### Debug Commands
-
-**Backend Health Check:**
+### Test Backend API
 ```bash
+# Health check
 curl https://your-backend-url.onrender.com/api/health
+
+# Upload image (using Postman or curl)
+curl -X POST \
+  -F "image=@test-image.jpg" \
+  https://your-backend-url.onrender.com/api/upload
+
+# Get all images
+curl https://your-backend-url.onrender.com/api/images
 ```
 
-**Frontend Build Test:**
+### Test Frontend
+1. Go to your Vercel frontend URL
+2. Navigate to Products page
+3. Try uploading an image
+4. Check if images display correctly
+
+---
+
+## 🔧 Alternative Deployment Options
+
+### Railway.app
+1. Similar to Render.com
+2. Good for Node.js apps
+3. Free tier available
+
+### Heroku
+1. More established platform
+2. Requires credit card for free tier
+3. Good documentation
+
+### DigitalOcean App Platform
+1. More control
+2. Pay-as-you-go pricing
+3. Good for production apps
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues:
+
+1. **CORS Errors**
+   - Check `FRONTEND_URL` environment variable
+   - Ensure it matches your frontend domain exactly
+
+2. **Image Upload Fails**
+   - Verify Cloudinary credentials
+   - Check file size limits (5MB)
+   - Ensure file type is image (jpg, png, gif)
+
+3. **Build Failures**
+   - Check `package.json` dependencies
+   - Verify Node.js version compatibility
+   - Check build logs in deployment platform
+
+4. **Environment Variables**
+   - Double-check all environment variables are set
+   - Ensure no typos in variable names
+   - Redeploy after changing environment variables
+
+### Debug Commands:
 ```bash
-cd frontend
-npm run build
+# Check backend health
+curl https://your-backend-url/api/health
+
+# Check environment variables
+echo $NODE_ENV
+echo $CLOUDINARY_CLOUD_NAME
+
+# Check logs in deployment platform dashboard
 ```
 
 ---
 
-## 📊 Monitoring
+## 📞 Support
 
-### Vercel Analytics
-- Built-in analytics in Vercel dashboard
-- Performance monitoring
-- Error tracking
-
-### Backend Monitoring
-- Render: Built-in logs and metrics
-- Railway: Real-time logs
-- Heroku: Application logs and metrics
+If you encounter issues:
+1. Check the deployment platform logs
+2. Verify all environment variables are set
+3. Test API endpoints individually
+4. Check browser console for frontend errors
 
 ---
 
-## 🔄 Continuous Deployment
+## 🎉 Success Checklist
 
-Both platforms support automatic deployments:
-- **Push to main branch** → Automatic deployment
-- **Preview deployments** for pull requests
-- **Rollback** to previous versions
+- [ ] Backend deployed and accessible
+- [ ] Frontend deployed and accessible
+- [ ] Images can be uploaded
+- [ ] Images display correctly
+- [ ] CORS issues resolved
+- [ ] All API endpoints working
+- [ ] Environment variables configured
+- [ ] Health check endpoint responding
 
----
+Your Pharmacy Management System should now be fully deployed with image handling capabilities! 🚀
 
-## 🎉 Success!
-
-Once deployed, your pharmacy system will be available at:
-- **Frontend:** `https://your-app.vercel.app`
-- **Backend:** `https://your-api.onrender.com`
-
-Share these URLs with your team and start using your pharmacy management system! 🚀

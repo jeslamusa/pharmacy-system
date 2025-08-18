@@ -1,3 +1,4 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 import { TrendingUp, TrendingDown, Package, ShoppingCart, Users, DollarSign } from 'lucide-react'
 import { StatCard as StatCardType } from '../types'
