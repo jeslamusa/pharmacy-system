@@ -144,7 +144,7 @@ export default function AdminDashboard() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6 mt-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6"
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>
@@ -217,7 +217,7 @@ export default function AdminDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-6"
         >
           {alerts.map((alert, index) => {
             const Icon = alert.icon

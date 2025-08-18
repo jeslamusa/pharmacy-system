@@ -100,7 +100,7 @@ export default function SupervisorDashboard() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6 mt-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mx-6"
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>
