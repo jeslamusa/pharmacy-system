@@ -94,33 +94,25 @@ export default function SupervisorDashboard() {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-gray-50">
-      {/* Content */}
-      <div className="relative z-10 min-h-screen w-full pt-20">
-        {/* Header */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50 to-indigo-50">
+      <div className="p-6 space-y-6">
+        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
         >
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Supervisor Dashboard</h1>
-            <p className="text-gray-600 mt-2">Monitoring and oversight activities</p>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 bg-purple-50 px-4 py-2 rounded-lg">
-              <Monitor size={20} className="text-purple-600" />
-              <span className="text-purple-800 font-medium">Supervisor Access</span>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Supervisor Dashboard</h1>
+              <p className="text-gray-600">Monitoring and oversight operations</p>
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleLogout}
-              className="flex items-center space-x-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              <LogOut size={20} />
-              <span>Logout</span>
-            </motion.button>
+            <div className="mt-4 lg:mt-0 flex items-center space-x-4">
+              <div className="flex items-center space-x-2 bg-purple-50 px-4 py-2 rounded-lg">
+                <Monitor size={20} className="text-purple-600" />
+                <span className="text-purple-800 font-medium">Supervisor Access</span>
+              </div>
+            </div>
           </div>
         </motion.div>
 

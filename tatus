@@ -1,0 +1,5 @@
+[33m362ffeb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix image display: use local storage and add sample images
+[33m647a2ad[m Fix deployment: add root package.json for backend deployment
+[33m1eed576[m Add image upload functionality and deployment guide
+[33mb0b433c[m Remove ImageTest component and fix image loading with CSS classes
+[33m18f2c22[m Simplify vercel.json to minimal configuration

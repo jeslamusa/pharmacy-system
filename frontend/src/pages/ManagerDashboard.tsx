@@ -95,33 +95,25 @@ export default function ManagerDashboard() {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-gray-50">
-      {/* Content */}
-      <div className="relative z-10 min-h-screen w-full pt-20">
-        {/* Header */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50 to-emerald-50">
+      <div className="p-6 space-y-6">
+        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between p-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
         >
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Manager Dashboard</h1>
-            <p className="text-gray-600 mt-2">Operational oversight and management</p>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-lg">
-              <Activity size={20} className="text-green-600" />
-              <span className="text-green-800 font-medium">Manager Access</span>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Manager Dashboard</h1>
+              <p className="text-gray-600">Operational oversight and management</p>
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleLogout}
-              className="flex items-center space-x-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              <LogOut size={20} />
-              <span>Logout</span>
-            </motion.button>
+            <div className="mt-4 lg:mt-0 flex items-center space-x-4">
+              <div className="flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-lg">
+                <Activity size={20} className="text-green-600" />
+                <span className="text-green-800 font-medium">Manager Access</span>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -130,7 +122,7 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {stats.map((stat, index) => {
             const Icon = stat.icon
@@ -140,14 +132,16 @@ export default function ManagerDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + index * 0.1 }}
-                className={`${stat.bgColor} p-6 rounded-lg border border-gray-200 shadow-lg`}
+                className={`${stat.bgColor} border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
               >
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium text-gray-600">{stat.title}</p>
                     <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
                   </div>
-                  <Icon size={24} className={stat.color} />
+                  <div className={`p-3 rounded-xl ${stat.bgColor}`}>
+                    <Icon size={24} className={stat.color} />
+                  </div>
                 </div>
               </motion.div>
             )
@@ -159,7 +153,7 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg mx-6 mt-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -173,7 +167,7 @@ export default function ManagerDashboard() {
                 >
                   <Link
                     to={action.link}
-                    className={`${action.color} p-4 rounded-lg text-white hover:opacity-90 transition-opacity block shadow-md`}
+                    className={`${action.color} p-4 rounded-2xl text-white hover:shadow-xl transition-all duration-300 block shadow-md`}
                   >
                     <Icon size={24} className="mb-2" />
                     <h3 className="font-semibold mb-1">{action.title}</h3>
@@ -190,10 +184,10 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 mt-6"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           {/* Order Status Overview */}
-          <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Order Status Overview</h2>
             <div className="space-y-4">
               {[
@@ -202,7 +196,7 @@ export default function ManagerDashboard() {
                 { status: 'Shipped', count: mockOrders.filter(o => o.status === 'shipped').length, color: 'bg-purple-100 text-purple-800' },
                 { status: 'Delivered', count: mockOrders.filter(o => o.status === 'delivered').length, color: 'bg-green-100 text-green-800' }
               ].map((item) => (
-                <div key={item.status} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div key={item.status} className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
                   <div className="flex items-center space-x-3">
                     <div className={`w-3 h-3 rounded-full ${item.color.replace('bg-', 'bg-').replace(' text-', '')}`}></div>
                     <span className="font-medium text-gray-900">{item.status}</span>
@@ -214,11 +208,11 @@ export default function ManagerDashboard() {
           </div>
 
           {/* Inventory Alerts */}
-          <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Inventory Alerts</h2>
             <div className="space-y-3">
               {mockProducts.filter(p => p.stock < 15).slice(0, 5).map((product) => (
-                <div key={product.id} className={`flex items-center justify-between p-3 rounded-lg ${
+                <div key={product.id} className={`flex items-center justify-between p-3 rounded-xl ${
                   product.stock < 5 ? 'bg-red-50 border border-red-200' : 'bg-yellow-50 border border-yellow-200'
                 }`}>
                   <div>
@@ -244,23 +238,23 @@ export default function ManagerDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-white rounded-lg border border-gray-200 p-6 shadow-lg mx-6 mt-6"
+          className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-4 bg-blue-50 rounded-lg">
+            <div className="text-center p-4 bg-blue-50 rounded-xl">
               <TrendingUp size={32} className="text-blue-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">{totalOrders}</p>
               <p className="text-sm text-gray-600">Total Orders</p>
             </div>
-            <div className="text-center p-4 bg-green-50 rounded-lg">
+            <div className="text-center p-4 bg-green-50 rounded-xl">
               <DollarSign size={32} className="text-green-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">
                 UGX {mockOrders.reduce((sum, order) => sum + order.totalAmount, 0).toLocaleString()}
               </p>
               <p className="text-sm text-gray-600">Total Revenue</p>
             </div>
-            <div className="text-center p-4 bg-purple-50 rounded-lg">
+            <div className="text-center p-4 bg-purple-50 rounded-xl">
               <Users size={32} className="text-purple-600 mx-auto mb-2" />
               <p className="text-2xl font-bold text-gray-900">{totalCustomers}</p>
               <p className="text-sm text-gray-600">Active Customers</p>

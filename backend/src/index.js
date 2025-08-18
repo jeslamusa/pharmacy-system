@@ -174,6 +174,124 @@ app.get('/api/products', (req, res) => {
   res.json(mockProducts);
 });
 
+// Notification system endpoints
+app.get('/api/notifications', (req, res) => {
+  const mockNotifications = [
+    {
+      id: 1,
+      type: 'message',
+      title: 'New Customer Inquiry',
+      message: 'Customer John Doe is asking about product availability',
+      sender: 'john.doe@email.com',
+      timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(), // 2 hours ago
+      read: false,
+      priority: 'medium'
+    },
+    {
+      id: 2,
+      type: 'order',
+      title: 'New Order Received',
+      message: 'Order #ORD-003 has been placed by Kampala Hospital',
+      sender: 'system',
+      timestamp: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(), // 1 hour ago
+      read: false,
+      priority: 'high'
+    },
+    {
+      id: 3,
+      type: 'stock',
+      title: 'Low Stock Alert',
+      message: 'Paracetamol 500mg is running low (5 units remaining)',
+      sender: 'system',
+      timestamp: new Date(Date.now() - 30 * 60 * 1000).toISOString(), // 30 minutes ago
+      read: true,
+      priority: 'high'
+    },
+    {
+      id: 4,
+      type: 'message',
+      title: 'Product Information Request',
+      message: 'Dr. Sarah is requesting information about new antibiotics',
+      sender: 'dr.sarah@hospital.com',
+      timestamp: new Date(Date.now() - 15 * 60 * 1000).toISOString(), // 15 minutes ago
+      read: false,
+      priority: 'medium'
+    }
+  ];
+  res.json(mockNotifications);
+});
+
+app.post('/api/notifications/:id/read', (req, res) => {
+  const { id } = req.params;
+  // In a real app, this would update the database
+  res.json({ 
+    success: true, 
+    message: `Notification ${id} marked as read` 
+  });
+});
+
+app.post('/api/messages', (req, res) => {
+  const { name, email, subject, message } = req.body;
+  
+  // Validate required fields
+  if (!name || !email || !subject || !message) {
+    return res.status(400).json({
+      success: false,
+      message: 'All fields are required'
+    });
+  }
+
+  // In a real app, this would save to database and send email
+  const newMessage = {
+    id: Date.now(),
+    name,
+    email,
+    subject,
+    message,
+    timestamp: new Date().toISOString(),
+    status: 'unread'
+  };
+
+  res.json({
+    success: true,
+    message: 'Message sent successfully',
+    data: newMessage
+  });
+});
+
+app.get('/api/messages', (req, res) => {
+  const mockMessages = [
+    {
+      id: 1,
+      name: 'John Doe',
+      email: 'john.doe@email.com',
+      subject: 'Product Availability Inquiry',
+      message: 'I would like to know if you have Paracetamol 500mg in stock. We need 1000 tablets for our clinic.',
+      timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
+      status: 'unread'
+    },
+    {
+      id: 2,
+      name: 'Dr. Sarah Johnson',
+      email: 'dr.sarah@hospital.com',
+      subject: 'New Product Information',
+      message: 'We are interested in learning more about your new antibiotic line. Can you send us a catalog?',
+      timestamp: new Date(Date.now() - 1 * 60 * 60 * 1000).toISOString(),
+      status: 'unread'
+    },
+    {
+      id: 3,
+      name: 'Kampala Medical Center',
+      email: 'info@kampalamedical.com',
+      subject: 'Bulk Order Request',
+      message: 'We need to place a large order for various medications. Please contact us for pricing.',
+      timestamp: new Date(Date.now() - 30 * 60 * 1000).toISOString(),
+      status: 'read'
+    }
+  ];
+  res.json(mockMessages);
+});
+
 app.get('/api/orders', (req, res) => {
   const mockOrders = [
     {
