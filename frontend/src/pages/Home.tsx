@@ -124,7 +124,7 @@ export default function Home() {
                
                {/* Company name and tagline */}
                <div className="leading-tight">
-                 <h1 className="font-bold text-lg sm:text-xl lg:text-2xl text-blue-900">Samiclyn Pharmaceutical Distributors (U) Ltd</h1>
+                 <h1 className="font-bold text-lg sm:text-xl lg:text-2xl text-blue-900">Pharmaceutical Management System (T) Ltd</h1>
                  <div className="w-24 sm:w-32 h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 my-1"></div>
                  <p className="text-sm sm:text-base text-blue-900 italic font-medium">Quality • Compliance • Excellence</p>
                </div>

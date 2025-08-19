@@ -109,7 +109,7 @@ export default function Contact() {
           },{
             title: 'EMAIL US',
             icon: <Mail size={56} className="text-danger-500 mx-auto" />,
-            body: 'info@samiclyn.co.ug\nsales@samiclyn.co.ug\nsamiclynpharma@gmail.com'
+            body: 'info@pharmaceutical.co.tz\nsales@pharmaceutical.co.tz\npharmaceutical@gmail.com'
           }].map((t) => (
             <div key={t.title} className="p-6 rounded-lg bg-white border shadow-sm">
               {t.icon}
