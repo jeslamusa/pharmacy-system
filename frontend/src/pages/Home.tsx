@@ -42,7 +42,7 @@ export default function Home() {
     },
     {
       title: "TRUSTED PHARMACEUTICAL DISTRIBUTORS",
-      subtitle: "Serving Uganda and the Great Lakes Region with excellence"
+                  subtitle: "Serving Tanzania and the Great Lakes Region with excellence"
     },
     {
       title: "24/7 DEDICATED SUPPORT",
@@ -58,7 +58,7 @@ export default function Home() {
     },
     {
       title: "GLOBAL PHARMACEUTICAL PARTNERSHIPS",
-      subtitle: "Connecting Uganda with world-class pharmaceutical manufacturers"
+                  subtitle: "Connecting Tanzania with world-class pharmaceutical manufacturers"
     },
     {
       title: "COMMUNITY HEALTH INITIATIVES",
@@ -86,8 +86,8 @@ export default function Home() {
          <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
            <div className="flex items-center gap-2 text-center sm:text-left">
              <HomeIcon size={12} className="opacity-80 flex-shrink-0" />
-             <span className="hidden sm:inline">Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Kampala</span>
-             <span className="sm:hidden">Kampala, Uganda</span>
+             <span className="hidden sm:inline">Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Dar es Salaam</span>
+             <span className="sm:hidden">Dar es Salaam, Tanzania</span>
            </div>
            <div className="flex items-center gap-2 sm:gap-4">
              <div className="flex items-center gap-1">
@@ -108,10 +108,17 @@ export default function Home() {
         <header className="bg-white sticky top-0 z-40 border-b shadow-sm">
           <div className="max-w-7xl mx-auto px-4 h-20 sm:h-24 flex items-center justify-between">
             <div className="flex items-center gap-3 sm:gap-4">
-                             {/* Samiclyn Logo with gradient background */}
-               <div className="relative">
-                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center shadow-lg">
-                   <span className="text-white font-bold text-lg sm:text-xl">S</span>
+                             {/* Pharmaceutical Management System Logo with gradient background */}
+               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 p-8 text-white shadow-xl">
+                 <div className="absolute inset-0 bg-black/20"></div>
+                 <div className="relative z-10 flex items-center gap-4">
+                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-2xl font-bold backdrop-blur-sm">
+                     P
+                   </div>
+                   <div>
+                     <h1 className="font-bold text-lg sm:text-xl lg:text-2xl text-blue-900">Pharmaceutical Management System (T) Ltd</h1>
+                     <p className="text-sm opacity-90">Leading Pharmaceutical Distributors</p>
+                   </div>
                  </div>
                </div>
                
@@ -271,13 +278,13 @@ export default function Home() {
                viewport={{ once: true }}
                transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
              >
-               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">WELCOME TO SAMICLYN PHARMACEUTICAL DISTRIBUTORS (U) LTD</h2>
+               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">WELCOME TO PHARMACEUTICAL MANAGEMENT SYSTEM (T) LTD</h2>
                <div className="w-20 h-1 bg-blue-600 my-4" />
                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                  We are a Kampala-based distributor of high‑quality human pharmaceutical, surgical, medical and
                  nutritional products. We partner with globally certified manufacturers and operate with strict
                  compliance to National Drug Authority (NDA) and international standards to ensure quality,
-                 affordability and reliability across Uganda and the Great Lakes Region.
+                                   affordability and reliability across Tanzania and the Great Lakes Region.
                </p>
                <Link to="/about" className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-semibold text-sm sm:text-base">Read More</Link>
              </motion.div>
@@ -316,7 +323,7 @@ export default function Home() {
               {[
                 {
                   title: "Importation & Distribution",
-                  description: "Efficient supply chain management for seamless delivery across Uganda and the Great Lakes Region."
+                  description: "Efficient supply chain management for seamless delivery across Tanzania and the Great Lakes Region."
                 },
                 {
                   title: "Regulatory Compliance",
@@ -398,12 +405,12 @@ export default function Home() {
                 {
                   name: "National Drug Authority",
                   url: "https://www.nda.or.ug",
-                  description: "Uganda's regulatory body for pharmaceuticals",
+                  description: "Tanzania's regulatory body for pharmaceuticals",
                   color: "from-emerald-500 to-teal-600",
                   icon: "🏥"
                 },
                 {
-                  name: "Ministry of Health, Uganda",
+                  name: "Ministry of Health, Tanzania",
                   url: "https://www.health.go.ug",
                   description: "Official health ministry website",
                   color: "from-blue-500 to-indigo-600",
@@ -499,21 +506,21 @@ export default function Home() {
                    role: "Medical Director",
                    hospital: "Kampala General Hospital",
                    rating: 5,
-                   comment: "Samiclyn has consistently delivered high-quality pharmaceutical products. Their reliability and professional service have made them our trusted partner for over a year."
+                   comment: "Pharmaceutical Management System has consistently delivered high-quality pharmaceutical products. Their reliability and professional service have made them our trusted partner for over a year."
                  },
                  {
                    name: "Dr. Laura Paul",
                    role: "Chief Pharmacist",
                    hospital: "Mulago National Hospital",
                    rating: 5,
-                   comment: "Excellent product quality and timely delivery. Samiclyn's commitment to compliance and customer service is outstanding. Highly recommended!"
+                   comment: "Excellent product quality and timely delivery. Pharmaceutical Management System's commitment to compliance and customer service is outstanding. Highly recommended!"
                  },
                  {
                    name: "Dr. Meggi Wilbard",
                    role: "Hospital Administrator",
                    hospital: "St. Francis Hospital",
                    rating: 4,
-                   comment: "Great partnership with Samiclyn. Their products meet international standards and their team is always responsive to our needs."
+                   comment: "Great partnership with Pharmaceutical Management System. Their products meet international standards and their team is always responsive to our needs."
                  }
                ].map((testimonial, i) => (
                 <motion.div
@@ -592,22 +599,22 @@ export default function Home() {
              <div className="grid sm:grid-cols-2 gap-6">
                <div>
                  <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">LOCATION</h4>
-                 <p className="mt-2 text-gray-700 text-sm sm:text-base">Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Kampala District<br/>P.O. Box 192709, Kampala, Uganda</p>
+                 <p className="mt-2 text-gray-700 text-sm sm:text-base">Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Dar es Salaam District<br/>P.O. Box 192709, Dar es Salaam, Tanzania</p>
                </div>
                                <div>
                   <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">CONTACT US</h4>
                   <p className="mt-2 flex items-center gap-2 text-sm sm:text-base"><Phone size={16}/> +256 776 780 035, +256 776 780 036</p>
                   <p className="mt-1 flex items-center gap-2 text-sm sm:text-base">
                     <Mail size={16}/> 
-                    <a href="mailto:info@samiclyn.co.ug" className="text-blue-600 hover:text-blue-800 underline">info@samiclyn.co.ug</a>
+                    <a href="mailto:info@pharmaceutical.co.tz" className="text-blue-600 hover:text-blue-800 underline">info@pharmaceutical.co.tz</a>
                   </p>
                   <p className="mt-1 flex items-center gap-2 text-sm sm:text-base">
                     <Mail size={16}/> 
-                    <a href="mailto:sales@samiclyn.co.ug" className="text-blue-600 hover:text-blue-800 underline">sales@samiclyn.co.ug</a>
+                    <a href="mailto:sales@pharmaceutical.co.tz" className="text-blue-600 hover:text-blue-800 underline">sales@pharmaceutical.co.tz</a>
                   </p>
                   <p className="mt-1 flex items-center gap-2 text-sm sm:text-base">
                     <Mail size={16}/> 
-                    <a href="mailto:samiclynpharma@gmail.com" className="text-blue-600 hover:text-blue-800 underline">samiclynpharma@gmail.com</a>
+                    <a href="mailto:pharmaceutical@gmail.com" className="text-blue-600 hover:text-blue-800 underline">pharmaceutical@gmail.com</a>
                   </p>
                 </div>
                <div>
@@ -633,10 +640,10 @@ export default function Home() {
            <div>
              <h5 className="text-xl sm:text-2xl font-bold mb-3">BRIEF BACKGROUND</h5>
              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-               Samiclyn Pharmaceutical Distributors (U) Ltd is a Kampala‑based company established in 2025. We
+               Pharmaceutical Management System (T) Ltd is a Dar es Salaam‑based company established in 2025. We
                specialize in the importation and distribution of high‑quality pharmaceutical, surgical, medical and
-               nutritional products. Our systems align with NDA and international standards to ensure safety,
-               efficacy and affordability across Uganda and the Great Lakes Region.
+               nutritional products. Our systems align with TFDA and international standards to ensure safety,
+               efficacy and affordability across Tanzania and the Great Lakes Region.
              </p>
            </div>
            <div>
@@ -649,15 +656,15 @@ export default function Home() {
                {['HOME','ABOUT US','PRODUCTS','SERVICES','CONTACT US'].map((l)=> (
                  <li key={l}><a href={`#${l.split(' ')[0].toLowerCase()}`} className="hover:text-white transition-colors">{l}</a></li>
                ))}
-               <li><a href="https://www.nda.or.ug" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">National Drug Authority (NDA)</a></li>
-               <li><a href="https://www.health.go.ug" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Ministry of Health, Uganda</a></li>
+               <li><a href="https://www.tfda.go.tz" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Tanzania Food and Drugs Authority (TFDA)</a></li>
+               <li><a href="https://www.moh.go.tz" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Ministry of Health, Tanzania</a></li>
                <li><a href="https://www.who.int" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">World Health Organization (WHO)</a></li>
              </ul>
            </div>
          </div>
          <div className="border-t border-gray-700">
            <div className="max-w-7xl mx-auto px-4 py-4 text-center text-sm text-gray-400">
-             Copyright © {new Date().getFullYear()} - Samiclyn Pharmaceutical Distributors (U) Ltd | All Rights Reserved
+             Copyright © {new Date().getFullYear()} - Pharmaceutical Management System (T) Ltd | All Rights Reserved
            </div>
          </div>
        </footer>

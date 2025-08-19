@@ -17,7 +17,7 @@ export default function Settings() {
   const [formData, setFormData] = useState({
     firstName: 'Admin',
     lastName: 'User',
-    email: 'admin@samiclyn.co.ug',
+    email: 'admin@pharmaceutical.co.tz',
     phone: '+256 776 780 035',
     currentPassword: '',
     newPassword: '',

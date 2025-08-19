@@ -34,7 +34,7 @@ export default function Sidebar({ onClose, onLogout }: SidebarProps) {
           S
         </div>
         <div>
-          <p className="font-semibold text-gray-900 leading-tight">Samiclyn</p>
+          <p className="font-semibold text-gray-900 leading-tight">Pharmaceutical Management System</p>
           <p className="text-xs text-gray-500">Pharma Admin</p>
         </div>
       </div>

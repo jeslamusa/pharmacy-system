@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { galleryImages, galleryFallback } from '../data/gallery'
@@ -11,7 +12,6 @@ import {
   PhoneCall,
   Navigation,
 } from 'lucide-react'
-import { useState } from 'react'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', contact: '', message: '' })
@@ -57,8 +57,8 @@ export default function Contact() {
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-lg bg-primary-600 text-white flex items-center justify-center text-xl font-bold">S</div>
             <div className="leading-tight">
-              <p className="font-semibold text-lg">Samiclyn Pharmaceutical Distributors (U) Ltd</p>
-              <p className="text-xs text-secondary-500">Kampala, Uganda | Established 2025</p>
+              <p className="font-semibold text-lg">Pharmaceutical Management System (T) Ltd</p>
+              <p className="text-xs text-secondary-500">Dar es Salaam, Tanzania | Established 2025</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-2 text-sm font-semibold">
@@ -101,7 +101,7 @@ export default function Contact() {
           {[{
             title: 'VISIT US',
             icon: <HomeIcon size={56} className="text-danger-500 mx-auto" />,
-            body: 'Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Kampala District\nP.O. Box 192709, Kampala, Uganda'
+            body: 'Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Dar es Salaam District\nP.O. Box 192709, Dar es Salaam, Tanzania'
           },{
             title: 'CALL US',
             icon: <Phone size={56} className="text-danger-500 mx-auto" />,

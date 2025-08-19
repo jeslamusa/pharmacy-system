@@ -278,7 +278,7 @@ export default function Topbar({ onMenuClick, onLogout }: TopbarProps) {
                 >
                   <div className="px-4 py-3 border-b border-gray-100">
                     <p className="text-sm font-semibold text-gray-900">{getUserDisplayName()}</p>
-                    <p className="text-xs text-gray-500">{role}@samiclyn.co.ug</p>
+                    <p className="text-xs text-gray-500">{role}@pharmaceutical.co.tz</p>
                   </div>
                   
                   <div className="py-1">
