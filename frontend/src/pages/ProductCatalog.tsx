@@ -24,7 +24,7 @@ export default function ProductCatalog() {
         key: 'featured',
         title: 'Our Products',
         blurb:
-          'Pharmaceutical Management System distributes a diverse and expanding range of pharmaceutical and nutritional products from certified manufacturers. Below is a selection of our key offerings.',
+          'Samiclyn distributes a diverse and expanding range of pharmaceutical and nutritional products from certified manufacturers. Below is a selection of our key offerings.',
         items: [
           {
             id: 'cartiflex-plus',
@@ -120,7 +120,7 @@ export default function ProductCatalog() {
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-lg bg-primary-600 text-white flex items-center justify-center text-xl font-bold">S</div>
             <div className="leading-tight">
-              <p className="font-semibold text-lg">Pharmaceutical Management System (T) Ltd</p>
+              <p className="font-semibold text-lg">Samiclyn Pharmaceutical Distributors (U) Ltd</p>
               <p className="text-xs text-secondary-500">Product Catalog</p>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function ProductCatalog() {
             <div className="text-center text-white px-4">
               <h1 className="text-5xl font-extrabold tracking-wider uppercase">Our Products</h1>
               <p className="mt-4 max-w-3xl text-lg opacity-95">
-                Pharmaceutical Management System distributes a diverse and expanding range of pharmaceutical and nutritional products
+                Samiclyn distributes a diverse and expanding range of pharmaceutical and nutritional products
                 from certified manufacturers. All products undergo rigorous quality assurance to ensure safety,
                 efficacy and affordability.
               </p>
@@ -246,7 +246,7 @@ export default function ProductCatalog() {
       {/* Footer */}
       <footer className="bg-secondary-900 text-secondary-100">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm">
-          © {new Date().getFullYear()} Pharmaceutical Management System (T) Ltd
+          © {new Date().getFullYear()} Samiclyn Pharmaceutical Distributors (U) Ltd
         </div>
       </footer>
     </div>

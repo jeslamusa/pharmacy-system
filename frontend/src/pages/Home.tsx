@@ -42,7 +42,7 @@ export default function Home() {
     },
     {
       title: "TRUSTED PHARMACEUTICAL DISTRIBUTORS",
-                  subtitle: "Serving Tanzania and the Great Lakes Region with excellence"
+                  subtitle: "Serving Uganda and the Great Lakes Region with excellence"
     },
     {
       title: "24/7 DEDICATED SUPPORT",
@@ -58,7 +58,7 @@ export default function Home() {
     },
     {
       title: "GLOBAL PHARMACEUTICAL PARTNERSHIPS",
-                  subtitle: "Connecting Tanzania with world-class pharmaceutical manufacturers"
+                  subtitle: "Connecting Uganda with world-class pharmaceutical manufacturers"
     },
     {
       title: "COMMUNITY HEALTH INITIATIVES",
@@ -86,8 +86,8 @@ export default function Home() {
          <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
            <div className="flex items-center gap-2 text-center sm:text-left">
              <HomeIcon size={12} className="opacity-80 flex-shrink-0" />
-             <span className="hidden sm:inline">Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Dar es Salaam</span>
-             <span className="sm:hidden">Dar es Salaam, Tanzania</span>
+             <span className="hidden sm:inline">Along Old Butabika Road, Butabika Zone, Mutungo Parish, Nakawa Division, Kampala</span>
+             <span className="sm:hidden">Kampala, Uganda</span>
            </div>
            <div className="flex items-center gap-2 sm:gap-4">
              <div className="flex items-center gap-1">
@@ -108,23 +108,9 @@ export default function Home() {
         <header className="bg-white sticky top-0 z-40 border-b shadow-sm">
           <div className="max-w-7xl mx-auto px-4 h-20 sm:h-24 flex items-center justify-between">
             <div className="flex items-center gap-3 sm:gap-4">
-                             {/* Pharmaceutical Management System Logo with gradient background */}
-               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 p-8 text-white shadow-xl">
-                 <div className="absolute inset-0 bg-black/20"></div>
-                 <div className="relative z-10 flex items-center gap-4">
-                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-2xl font-bold backdrop-blur-sm">
-                     P
-                   </div>
-                   <div>
-                     <h1 className="font-bold text-lg sm:text-xl lg:text-2xl text-blue-900">Pharmaceutical Management System (T) Ltd</h1>
-                     <p className="text-sm opacity-90">Leading Pharmaceutical Distributors</p>
-                   </div>
-                 </div>
-               </div>
-               
                {/* Company name and tagline */}
                <div className="leading-tight">
-                 <h1 className="font-bold text-lg sm:text-xl lg:text-2xl text-blue-900">Pharmaceutical Management System (T) Ltd</h1>
+                 <h1 className="font-bold text-lg sm:text-xl lg:text-2xl text-blue-900">Samiclyn Pharmaceutical Distributors (U) Ltd</h1>
                  <div className="w-24 sm:w-32 h-0.5 bg-gradient-to-r from-blue-600 to-blue-700 my-1"></div>
                  <p className="text-sm sm:text-base text-blue-900 italic font-medium">Quality • Compliance • Excellence</p>
                </div>
@@ -278,7 +264,7 @@ export default function Home() {
                viewport={{ once: true }}
                transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
              >
-               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">WELCOME TO PHARMACEUTICAL MANAGEMENT SYSTEM (T) LTD</h2>
+               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">WELCOME TO SAMICLYN PHARMACEUTICAL DISTRIBUTORS (U) LTD</h2>
                <div className="w-20 h-1 bg-blue-600 my-4" />
                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                  We are a Kampala-based distributor of high‑quality human pharmaceutical, surgical, medical and
@@ -506,21 +492,21 @@ export default function Home() {
                    role: "Medical Director",
                    hospital: "Kampala General Hospital",
                    rating: 5,
-                   comment: "Pharmaceutical Management System has consistently delivered high-quality pharmaceutical products. Their reliability and professional service have made them our trusted partner for over a year."
+                   comment: "Samiclyn has consistently delivered high-quality pharmaceutical products. Their reliability and professional service have made them our trusted partner for over a year."
                  },
                  {
                    name: "Dr. Laura Paul",
                    role: "Chief Pharmacist",
                    hospital: "Mulago National Hospital",
                    rating: 5,
-                   comment: "Excellent product quality and timely delivery. Pharmaceutical Management System's commitment to compliance and customer service is outstanding. Highly recommended!"
+                   comment: "Excellent product quality and timely delivery. Samiclyn's commitment to compliance and customer service is outstanding. Highly recommended!"
                  },
                  {
                    name: "Dr. Meggi Wilbard",
                    role: "Hospital Administrator",
                    hospital: "St. Francis Hospital",
                    rating: 4,
-                   comment: "Great partnership with Pharmaceutical Management System. Their products meet international standards and their team is always responsive to our needs."
+                   comment: "Great partnership with Samiclyn. Their products meet international standards and their team is always responsive to our needs."
                  }
                ].map((testimonial, i) => (
                 <motion.div
@@ -640,7 +626,7 @@ export default function Home() {
            <div>
              <h5 className="text-xl sm:text-2xl font-bold mb-3">BRIEF BACKGROUND</h5>
              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-               Pharmaceutical Management System (T) Ltd is a Dar es Salaam‑based company established in 2025. We
+               Samiclyn Pharmaceutical Distributors (U) Ltd is a Kampala‑based company established in 2025. We
                specialize in the importation and distribution of high‑quality pharmaceutical, surgical, medical and
                nutritional products. Our systems align with TFDA and international standards to ensure safety,
                efficacy and affordability across Tanzania and the Great Lakes Region.
@@ -664,7 +650,7 @@ export default function Home() {
          </div>
          <div className="border-t border-gray-700">
            <div className="max-w-7xl mx-auto px-4 py-4 text-center text-sm text-gray-400">
-             Copyright © {new Date().getFullYear()} - Pharmaceutical Management System (T) Ltd | All Rights Reserved
+             Copyright © {new Date().getFullYear()} - Samiclyn Pharmaceutical Distributors (U) Ltd | All Rights Reserved
            </div>
          </div>
        </footer>

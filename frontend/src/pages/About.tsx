@@ -9,7 +9,7 @@ export default function About() {
       {/* Top info bar */}
       <div className="bg-[#1f2a57] text-white text-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between gap-2">
-          <div>About Pharmaceutical Management System</div>
+          <div>About Samiclyn Pharmaceutical Distributors</div>
           <div className="opacity-90">Quality • Compliance • Excellence</div>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function About() {
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-lg bg-primary-600 text-white flex items-center justify-center text-xl font-bold">S</div>
             <div className="leading-tight">
-              <p className="font-semibold text-lg">Pharmaceutical Management System (T) Ltd</p>
+              <p className="font-semibold text-lg">Samiclyn Pharmaceutical Distributors (U) Ltd</p>
               <p className="text-xs text-secondary-500">About Us</p>
             </div>
           </div>
@@ -73,12 +73,12 @@ export default function About() {
              >
                                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-2xl border border-blue-200">
                   <p className="text-lg leading-relaxed mb-6 text-[#1f2a57]">
-                    Pharmaceutical Management System (T) Ltd is a pharmaceutical company based in Dar es Salaam, Tanzania, 
+                    Samiclyn Pharmaceutical Distributors (U) Ltd is a pharmaceutical company based in Kampala, Uganda, 
                     which deals in the importation and distribution of Human pharmaceutical, surgical and nutritional products. 
                     The company prides itself in ensuring that the customers' expectations and requirements are consistently met.
                   </p>
                   <p className="text-lg leading-relaxed text-[#1f2a57]">
-                    Pharmaceutical Management System (T) Ltd proudly exhibits a continually growing product portfolio 
+                    Samiclyn Pharmaceutical Distributors (U) Ltd proudly exhibits a continually growing product portfolio 
                     that is characteristic of high quality and safe pharmaceutical products that are effective and affordable.
                   </p>
                 </div>
@@ -189,7 +189,7 @@ export default function About() {
                  viewport={{ once: true }}
                  transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
                >
-                 Pharmaceutical Management System (T) Ltd has resolved to provide the community in Tanzania and 
+                 Samiclyn Pharmaceutical Distributors (U) Ltd has resolved to provide the community in Uganda and 
                  the Great Lakes Region with high quality, safe, efficacious and affordable Pharmaceuticals, Medical, 
                  Surgical and Nutritional products.
                </motion.p>
@@ -266,7 +266,7 @@ export default function About() {
            <div className="grid md:grid-cols-2 gap-12 items-center">
              <div>
                <p className="text-lg text-secondary-700 leading-relaxed mb-6">
-                 Pharmaceutical Management System is fully licensed by the National Drug Authority (NDA) of Tanzania and complies with 
+                 Samiclyn is fully licensed by the National Drug Authority (NDA) of Uganda and complies with 
                  local and international standards, including Good Distribution Practices (GDP) and Good 
                  Manufacturing Practices (GMP) as outlined by the World Health Organization (WHO).
                </p>
@@ -294,7 +294,7 @@ export default function About() {
                            <div className="bg-white rounded-xl p-8 shadow-xl border border-blue-100">
                <h3 className="text-2xl font-bold text-[#1f2a57] mb-6">Distribution Network</h3>
                <p className="text-secondary-700 leading-relaxed mb-4">
-                 Pharmaceutical Management System operates a robust distribution network spanning Tanzania and extending into Rwanda, 
+                 Samiclyn operates a robust distribution network spanning Uganda and extending into Rwanda, 
                  Burundi, and the Democratic Republic of Congo.
                </p>
                <p className="text-secondary-700 leading-relaxed">
@@ -344,13 +344,13 @@ export default function About() {
                transition={{ duration: 1.0, delay: 0.3 }}
              >
                <p className="text-lg text-secondary-700 leading-relaxed mb-6">
-                 Founded in Dar es Salaam, Tanzania, in 2025, Pharmaceutical Management System (T) Ltd is rapidly 
+                 Founded in Kampala, Uganda, in 2025, Samiclyn Pharmaceutical Distributors (U) Ltd is rapidly 
                  becoming a leader in pharmaceutical distribution. Since its inception, the company has 
                  contributed to Tanzania's healthcare system by supplying high-quality products and engaging 
                  in health sector initiatives.
                </p>
                <p className="text-lg text-secondary-700 leading-relaxed mb-6">
-                 Through global partnerships and local collaboration, Pharmaceutical Management System is dedicated to delivering 
+                 Through global partnerships and local collaboration, Samiclyn is dedicated to delivering 
                  innovative and affordable healthcare solutions that transform healthcare delivery and 
                  improve lives across the region.
                </p>
@@ -471,7 +471,7 @@ export default function About() {
       {/* Footer */}
       <footer className="bg-secondary-900 text-secondary-100">
         <div className="max-w-7xl mx-auto px-4 py-6 text-center text-sm">
-          © {new Date().getFullYear()} Pharmaceutical Management System (T) Ltd
+          © {new Date().getFullYear()} Samiclyn Pharmaceutical Distributors (U) Ltd
         </div>
       </footer>
 

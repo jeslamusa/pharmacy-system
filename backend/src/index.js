@@ -319,14 +319,14 @@ app.get('/api/customers', (req, res) => {
       name: 'Kampala Hospital',
       email: 'info@kampalahospital.com',
       phone: '+256-123-456-789',
-      address: 'Dar es Salaam, Tanzania'
+      address: 'Kampala, Uganda'
     },
     {
       id: 2,
       name: 'Mulago Clinic',
       email: 'contact@mulagoclinic.com',
       phone: '+256-987-654-321',
-      address: 'Mulago, Tanzania'
+      address: 'Mulago, Uganda'
     }
   ];
   res.json(mockCustomers);

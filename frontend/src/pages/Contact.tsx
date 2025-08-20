@@ -57,8 +57,8 @@ export default function Contact() {
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-lg bg-primary-600 text-white flex items-center justify-center text-xl font-bold">S</div>
             <div className="leading-tight">
-              <p className="font-semibold text-lg">Pharmaceutical Management System (T) Ltd</p>
-              <p className="text-xs text-secondary-500">Dar es Salaam, Tanzania | Established 2025</p>
+              <p className="font-semibold text-lg">Samiclyn Pharmaceutical Distributors (U) Ltd</p>
+                              <p className="text-xs text-secondary-500">Kampala, Uganda | Established 2025</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-2 text-sm font-semibold">
@@ -109,7 +109,7 @@ export default function Contact() {
           },{
             title: 'EMAIL US',
             icon: <Mail size={56} className="text-danger-500 mx-auto" />,
-            body: 'info@pharmaceutical.co.tz\nsales@pharmaceutical.co.tz\npharmaceutical@gmail.com'
+            body: 'info@samiclyn.co.ug\nsales@samiclyn.co.ug\nsamiclynpharma@gmail.com'
           }].map((t) => (
             <div key={t.title} className="p-6 rounded-lg bg-white border shadow-sm">
               {t.icon}
